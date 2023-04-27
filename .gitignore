@@ -1,0 +1,10 @@
+.idea
+__pycache__
+/config/__pycache__
+/blog/__pycache__
+/blog/migrations/__pycache__
+/db.sqlite3
+/venv/
+/__pycache__/
+*/__pycache__/
+/media/uploads/*

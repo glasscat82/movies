@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %} Movies 0.1v {% endblock %}
+
+{% block content %}
+    <h1 class='mb-4'>Movies list:</h1>
+    <div class="row">
+    {% for movie in movie_list %}
+    <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="card">
+            <div class="card-header">
+                <i class="fa fa-calendar"></i> {{ movie.year }}
+            </div>
+            {% if movie.poster %}
+                <img src="{{ movie.poster.url }}" class="card-img-top" alt="">    
+            {% endif %}       
+            <div class="card-body">
+                <h5 class="card-title">{{ movie.title }}</h5>
+                <p class="card-text">{{ movie.tagline }}</p>
+                <a href="{{ movie.get_absolute_url }}" class="btn btn-light btn-sm">Read &rarr;</a>
+            </div> 
+        </div>
+    </div>
+    {% endfor %}
+    </div>
+{% endblock %}
